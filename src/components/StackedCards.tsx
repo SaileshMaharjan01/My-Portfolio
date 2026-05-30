@@ -118,12 +118,12 @@ function ProjectCard({
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale]);
 
-  const topOffset = index * 16;
+  const topOffset = index * 0.005 * window.innerHeight; // Adjust the multiplier for more/less spacing
 
   return (
     <div
       ref={ref}
-      className="h-screen sticky top-24 flex items-center justify-center lg:min-w-6xl md:min-w-4xl"
+      className="h-screen sticky top-0.5 flex items-center justify-center lg:min-w-6xl md:min-w-4xl"
     >
       <motion.article
         style={{
