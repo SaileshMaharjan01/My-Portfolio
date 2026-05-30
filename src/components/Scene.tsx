@@ -147,7 +147,17 @@ function interpolatePose(
   };
 }
 
-export default function Scene({ isIntro }: { isIntro: boolean }) {
+export default function Scene() {
+  return null;
+}
+
+export function SceneCanvas({
+  isIntro,
+  showMainModel,
+}: {
+  isIntro: boolean;
+  showMainModel: boolean;
+}) {
   return (
     <div className="fixed inset-0 w-full h-full bg-transparent z-0">
       <Canvas
@@ -170,7 +180,7 @@ export default function Scene({ isIntro }: { isIntro: boolean }) {
         <pointLight position={[-10, -10, -10]} intensity={1} color="#EF4444" />
 
         <Suspense fallback={null}>
-          {isIntro ? <IntroModel /> : <MainModel />}
+          {isIntro ? <IntroModel /> : showMainModel ? <MainModel /> : null}
           <Environment preset="city" />
           <ContactShadows
             position={[0, -1, 0]}

@@ -2,7 +2,7 @@
 
 import Background3D from "@/components/Background3D";
 import { MarqueeSection } from "@/components/MarqueeSection";
-import Scene from "@/components/Scene";
+import { SceneCanvas } from "@/components/Scene";
 import ServicesSection from "@/components/ServicesSection";
 import StackedCards from "@/components/StackedCards";
 import { motion } from "framer-motion";
@@ -43,6 +43,7 @@ const FadeInUp = ({
 export default function Home() {
   const [isIntro, setIsIntro] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -51,10 +52,25 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+
+    const updateDesktopState = () => {
+      setIsDesktop(mediaQuery.matches);
+    };
+
+    updateDesktopState();
+    mediaQuery.addEventListener("change", updateDesktopState);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateDesktopState);
+    };
+  }, []);
+
   return (
     <main className="relative isolate w-full text-white font-sans">
       <Background3D />
-      <Scene isIntro={isIntro} />
+      <SceneCanvas isIntro={isIntro} showMainModel={isDesktop} />
 
       <div
         className={`transition-opacity duration-1000 ease-in-out ${
