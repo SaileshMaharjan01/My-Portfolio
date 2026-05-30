@@ -118,7 +118,7 @@ function ProjectCard({
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale]);
 
-  const topOffset = index * 0.005 * window.innerHeight; // Adjust the multiplier for more/less spacing
+  const topOffset = index * 0.5; // Keep the stagger without touching window during prerender
 
   return (
     <div
@@ -128,7 +128,7 @@ function ProjectCard({
       <motion.article
         style={{
           scale,
-          top: `${topOffset}px`,
+          top: `${topOffset}vh`,
         }}
         className={`relative w-full max-w-6xl h-135 overflow-hidden rounded-[40px] border border-white/10 shadow-2xl`}
       >
