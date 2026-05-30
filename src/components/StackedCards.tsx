@@ -61,11 +61,19 @@ const projects = [
     image: "/images/Sentinal.png",
   },
   {
+    title: "JARVIS",
+    description: "A UI for AI assistant JARVIS from Ironman",
+    color: "bg-zinc-600",
+    index: "07",
+    link: "https://jarvis-beta-1-0-0.vercel.app/",
+    image: "/images/JARVIS.png",
+  },
+  {
     title: "WeatherX",
     description:
       "A modern weather application that provides accurate forecasts and real-time updates.",
     color: "bg-zinc-600",
-    index: "07",
+    index: "08",
     link: "https://weather-app-lime-five-71.vercel.app/",
     image: "/images/weather-app.png",
   },
@@ -73,7 +81,7 @@ const projects = [
     title: "tic-tac-toe",
     description: "A classic game of tic-tac-toe with a modern twist.",
     color: "bg-zinc-600",
-    index: "08",
+    index: "09",
     link: "https://tictactoe-rho-lovat.vercel.app/",
     image: "/images/tictactoe.png",
   },
@@ -82,7 +90,7 @@ const projects = [
     description:
       "A image search engine based on search query and image fetch using  api.",
     color: "bg-zinc-600",
-    index: "09",
+    index: "10",
     link: "https://image-search-app-nu-henna.vercel.app/",
     image: "/images/image-gen.png",
   },
