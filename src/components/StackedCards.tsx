@@ -49,7 +49,7 @@ const projects = [
     color: "bg-zinc-600",
     index: "05",
     link: "https://prosthetic-site.vercel.app/",
-    image: "/images/Prosthetic-site.png",
+    image: "/images/prosthetic-site.png",
   },
   {
     title: "Sentinal",
