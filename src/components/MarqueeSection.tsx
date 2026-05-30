@@ -49,7 +49,7 @@ export const MarqueeSection = () => {
       id="skills"
       className="relative z-10 overflow-hidden border-y border-white/10 bg-black/20 px-6 py-24 md:px-12 md:py-32 backdrop-blur-xl backdrop-saturate-150"
     >
-      <div className="mx-auto max-w-7xl px-6 md:px-12 mb-12 md:mb-16">
+      <div className="mx-auto max-w-7xl px-6 md:px-12 mb-12 md:mb-16 text-center">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
