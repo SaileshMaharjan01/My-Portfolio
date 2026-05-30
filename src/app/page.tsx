@@ -169,7 +169,7 @@ export default function Home() {
 
         {/* ── Navigation ──────────────────────────────────────────── */}
         <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 md:px-10 pt-4 md:pt-6 pointer-events-none">
-          <div className="nav-glass pointer-events-auto mx-auto max-w-7xl md:rounded-full rounded-[48px] px-5 py-4 md:px-7 md:py-5">
+          <div className="nav-glass pointer-events-auto mx-auto max-w-7xl md:rounded-full rounded-[48px] px-5 py-4 md:px-7 md:py-5 bg-linear-to-br from-white/10 to-white/5 backdrop-blur-3xl backdrop-saturate-200 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
             <div className="flex items-center justify-between gap-4">
               <div className="text-xl font-bold tracking-[0.25em] text-white cursor-pointer">
                 SAILESH.STUDIO
